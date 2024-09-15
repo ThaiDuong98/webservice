@@ -99,6 +99,7 @@ class CarController {
          */
         Car myCar = carService.findById(id);
         if (myCar != null) {
+            car.setId(id);
             myCar = carService.save(car);
         }
         Resource<Car> resource = assembler.toResource(myCar);

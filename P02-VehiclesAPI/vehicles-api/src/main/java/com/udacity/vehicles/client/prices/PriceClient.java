@@ -35,7 +35,10 @@ public class PriceClient {
             Price price = client
                     .get()
                     .uri(uriBuilder -> uriBuilder
-                            .path("services/price/")
+                            .scheme("http")
+                            .host("localhost")
+                            .port(8082)
+                            .path("services/price")
                             .queryParam("vehicleId", vehicleId)
                             .build()
                     )
