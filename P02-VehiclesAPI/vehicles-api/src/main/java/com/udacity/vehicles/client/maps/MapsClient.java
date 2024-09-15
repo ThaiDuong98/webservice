@@ -19,9 +19,9 @@ public class MapsClient {
     private final WebClient client;
     private final ModelMapper mapper;
 
-    public MapsClient(WebClient maps,
+    public MapsClient(WebClient.Builder maps,
             ModelMapper mapper) {
-        this.client = maps;
+        this.client = maps.build();
         this.mapper = mapper;
     }
 
